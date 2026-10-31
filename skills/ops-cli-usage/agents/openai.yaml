@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPS CLI Usage"
+  short_description: "Use versioned OPS commands and operational workflows"
+  default_prompt: "Use $ops-cli-usage to identify my OPS profile and guide the next command."

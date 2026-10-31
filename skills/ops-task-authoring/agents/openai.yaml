@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ops Task Authoring"
+  short_description: "Minimal ops YAML with Bun task runners"
+  default_prompt: "Use $ops-task-authoring to design or refactor OpenServerless/Nuvolaris ops tasks with thin opsfiles and Bun TypeScript runners."
+
+policy:
+  allow_implicit_invocation: true

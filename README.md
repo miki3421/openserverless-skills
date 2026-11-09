@@ -1,10 +1,14 @@
 # OpenServerless skills
 
-Codex skills for using the OPS CLI and authoring OpenServerless/Nuvolaris tasks.
+Codex skills for using the OPS CLI, maintaining its service engine and authoring
+OpenServerless/Nuvolaris tasks.
 This is a personal collection, not an official Apache release.
 
 - [ops-cli-usage](skills/ops-cli-usage/SKILL.md): select commands using the active
   CLI, task revision and project plugins; follow versioned operational procedures.
+- [ops-engine](skills/ops-engine/SKILL.md): explain and diagnose the service engine,
+  trace invocation/streaming/scheduling paths, and maintain tenant-service,
+  persistence, security and recovery contracts using version-bound evidence.
 - [ops-task-authoring](skills/ops-task-authoring/SKILL.md): author thin task YAML
   and use companion Bun/TypeScript runners for substantial logic.
 
@@ -15,12 +19,13 @@ With Codex's bundled skill installer:
 ```bash
 python3 "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-installer/scripts/install-skill-from-github.py" \
   --repo miki3421/openserverless-skills \
-  --path skills/ops-cli-usage skills/ops-task-authoring
+  --path skills/ops-cli-usage skills/ops-engine skills/ops-task-authoring
 ```
 
 The installer refuses existing skill directories. Review existing installations
 before replacing them. Restart Codex to pick up newly installed skills. Invoke
-`$ops-cli-usage` or `$ops-task-authoring`; normal automatic discovery is enabled.
+`$ops-cli-usage`, `$ops-engine` or `$ops-task-authoring`; normal automatic discovery
+is enabled.
 The catalogue helper requires Python3.12+ and Git.
 
 ## Versioned references
@@ -37,6 +42,13 @@ identifiers to the actual active checkout. Project plugins need their own scan.
 The [profiles](skills/ops-cli-usage/references/profiles.md) and
 [procedures](skills/ops-cli-usage/references/procedures.md) distinguish inspected
 code, user-reported outcomes and pending acceptance checks.
+
+The engine skill includes a focused component/source map and references for
+diagnosis, lifecycle qualification, security boundaries and profile provenance.
+Its ADV notes are explicitly dated private-laboratory evidence, not current
+vendor status, deployment authority or production acceptance. Engine references
+do not replace the CLI command catalogues or imply that every OPS installation
+has the same topology, image versions or enabled services.
 
 ## Refresh and verify
 

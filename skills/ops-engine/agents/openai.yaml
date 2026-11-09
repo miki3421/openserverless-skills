@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPS Engine"
+  short_description: "Diagnose and maintain the OPS service engine"
+  default_prompt: "Use $ops-engine to inspect this installation and trace the reported problem through the relevant engine components."
